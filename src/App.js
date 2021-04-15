@@ -3,7 +3,8 @@ import "./App.css";
 import axios from 'axios';
 import Header from './Components/Header'
 import APOD from './Components/APOD'
-
+import Details from './Components/Details'
+import Explanation from './Components/Explanation'
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
       console.log(res.data);
       setPhoto(res.data.hdurl);
       setHeaderText(res.data.title);
-      setDetails(res.data.copyright + res.data.date);
+      setDetails(res.data.copyright +' '+ res.data.date);
       setExplanation(res.data.explanation);
     })
     .catch(err => {
@@ -32,8 +33,10 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <APOD />
+      <Header title={headerText}/>
+      <APOD image={photo}/>
+      <Details detail={details}/>
+      <Explanation about={explanation}/>
     </div>
   );
 }

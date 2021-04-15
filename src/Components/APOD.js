@@ -1,12 +1,12 @@
 import React from 'react';
 
 
-const APOD = (props) => {
+const APOD = ({ image }) => {
 
-    const { photo } = props;
+    // const { photo } = props;
     return (
         <div className= 'apod-container'>
-            <img src={photo} alt='Nasa POTD'></img>
+            <img src={image} alt='Nasa POTD'></img>
         </div>
     );
 };
