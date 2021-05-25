@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
-
+const detailStyle = {
+    color: 'white',
+};
  const Details = ({ detail })  => {
     
     return (
     <>
-        <h3>{detail}</h3>
+        <h3 style={detailStyle}>{detail}</h3>
     </>
     )
 }
