@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
-
+const explanationStyle = {
+    color: 'white',
+};
 const Explanation = ({ about }) => {
 
     return(
-        <div>
+        <div style={explanationStyle}>
             <p>{about}</p>
         </div>
     )
