@@ -5,6 +5,12 @@ import Header from './Components/Header';
 import APOD from './Components/APOD';
 import Details from './Components/Details';
 import Explanation from './Components/Explanation';
+import styled, { keyframes } from 'styled-components';
+
+const StyledBackground = styled.div`
+  background-image: url('https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80')
+`
+  
 
 function App() {
 
@@ -28,12 +34,14 @@ function App() {
   }, [])
 
   return (
+    <StyledBackground>
     <div className="App">
      <Header title={headerText}/>
      <Details detail={details}/>
      <APOD image={photo}/>
      <Explanation about={explanation}/>
     </div>
+    </StyledBackground>
   );
 }
 
